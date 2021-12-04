@@ -2,22 +2,30 @@ import React from "react";
 
 class Field extends React.Component {
   activateField = (event) => {
-    console.log(
-      "Click on r-",
-      event.target.dataset.row,
-      ", c-",
-      event.target.dataset.column
-    );
+    if (event.target.className === "cell") {
+      console.log(
+        "Click on r-",
+        event.target.dataset.row,
+        ", c-",
+        event.target.dataset.column
+      );
+    } else {
+      console.log("Enabled");
+    }
   };
   markField = (event) => {
     event.preventDefault();
+    if (event.target.className === "cell") {
+      console.log(
+        "Marked r-",
+        event.target.dataset.row,
+        ", c-",
+        event.target.dataset.column
+      );
+    } else {
+      console.log("Enabled");
+    }
     event.target.className = "cell marked";
-    console.log(
-      "Marked r-",
-      event.target.dataset.row,
-      ", c-",
-      event.target.dataset.column
-    );
   };
 
   render() {
@@ -64,5 +72,3 @@ class Field extends React.Component {
 // }
 
 export default Field;
-
-//как менять
