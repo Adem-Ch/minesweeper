@@ -10,7 +10,7 @@ class Field extends React.Component {
         event.target.dataset.column
       );
     } else {
-      console.log("Enabled");
+      console.log("checked");
     }
   };
   markField = (event) => {
@@ -23,7 +23,7 @@ class Field extends React.Component {
         event.target.dataset.column
       );
     } else {
-      console.log("Enabled");
+      console.log("checked");
     }
     event.target.className = "cell marked";
   };

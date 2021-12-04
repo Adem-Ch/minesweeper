@@ -1,5 +1,5 @@
-import './App.css';
-import Field from './field';
+import "./App.css";
+import ConfigArea from "./configarea";
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header>
-      <Field rows={10} columns={10} />
+      <ConfigArea />
+      {/* <Field rows={10} columns={10} /> */}
     </div>
   );
 }
